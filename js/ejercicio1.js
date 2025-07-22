@@ -20,10 +20,10 @@ function numCorrecto(){
         return;
     }
     if(numeroCheck===numeroMag){
-        alert(`adivinaste el número mágico ${numeroMag}`)
+        alert(`¡Adivinaste! El número mágico es ${numeroMag}`)
         resetJuego();
     }else{
-        alert('número incorrecto')
+        alert('Número incorrecto. Intenta nuevamente')
     }
     adivinanza.value = '';
 }
