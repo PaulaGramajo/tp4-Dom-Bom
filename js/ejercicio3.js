@@ -1,18 +1,6 @@
-const crearTarea = document.getElementById('formTareas')
-const tareas = document.querySelector('.row-gap-3');
+const formTareas = document.getElementById('formTareas')
 
-tareas.addEventListener('click', function(Event){
-    const clickedCard = Event.target.closest('card');
-    if(clickedCard){
-        const allCards = document.querySelectorAll('.card');
-        allCards.forEach(card => {
-            if (card !== clickedCard) {
-                card.classList.remove('selected');
-            }
-            })
-        clickedCard.classList.toggle('selected')
-    }
-})
+
 
 formTareas.addEventListener('submit', function(Event){
     Event.preventDefault();
@@ -23,23 +11,21 @@ formTareas.addEventListener('submit', function(Event){
     const divcardBody = document.createElement("div");  
     const p = document.createElement("p");
     const btnEliminar = document.createElement('button')
-    const inputCheckbox = document.createElement('input')
     
     divcol.className = "col-12"; 
     divcard.className = "card h-100";
-    divcardBody.className = "card-body d-flex justify-content-between align-items-center";
-    p.className = "card-text ";
-    inputCheckbox.type = 'checkbox'
+    divcardBody.className = "card-body d-flex flex-column justify-content-between align-items-center";
+    const divAdicional = document.createElement('div');
+    divAdicional.className = 'd-flex justify-content-between align-items-between'
+    p.className = "card-text m-0";
     p.textContent = inputTarea;
 
     btnEliminar.className = 'btn btn-danger btn-sm mt-3'
     btnEliminar.textContent = 'Eliminar'
 
+
     btnEliminar.addEventListener('click', function(){
-        const cardToRemove = Event.target.closest('.col-12');
-        if (cardToRemove) {
-            cardToRemove.remove();
-        }
+        divcol.remove();
     });
 
     const row = document.querySelector(".row-gap-3");
@@ -47,8 +33,8 @@ formTareas.addEventListener('submit', function(Event){
   row.appendChild(divcol);
   divcol.appendChild(divcard);
   divcard.appendChild(divcardBody);
-  divcardBody.appendChild(inputCheckbox);
-  divcardBody.appendChild(p);
-  divcardBody.appendChild(btnEliminar);
+  divAdicional.appendChild(p);
+  divAdicional.appendChild(btnEliminar);
+  divcardBody.appendChild(divAdicional);
   formTareas.reset();
 })
