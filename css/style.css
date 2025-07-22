@@ -27,6 +27,17 @@ header,footer{
     width: 50%;
 }
 
+.cardEj4{
+    box-shadow: 5px 5px 5px black;
+}
+
+.cardEj5{
+    background-color: #75c0b6b9
+}
+
+.pausa{
+    background-color: #dfdf2d;
+}
 
 @media(768<=width<=991){
 .botonFuncion{
@@ -35,17 +46,34 @@ header,footer{
 .entrada{
         width: 70%;
     }
+
+.cardEj5{
+    width: 100%;
+}
+
+.cardEj4{
+    width: 75%;
+}
+
 }
 @media (width >= 992px) {
-    .img-error404{
-      width: 40%;
-    }
-
     .botonFuncion{
         width: 20%;
     }
     
     .entrada{
         width: 70%;
+    }
+
+    .cardEj5{
+        width: 60%;
+    }
+
+    .cardEj4{
+        width: 60%;
+    }
+
+    .btnEj5{
+    width: 30%;
     }
   }
