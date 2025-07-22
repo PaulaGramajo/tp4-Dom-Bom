@@ -8,6 +8,8 @@ body{
 
 main{
     flex-grow: 1;
+    font-family: 'roboto', 'sanserif';
+    font-size: larger;
 }
 
 header,footer{
@@ -21,3 +23,29 @@ header,footer{
     background-color: #0000ff2a;
 }
 
+.botonFuncion{
+    width: 50%;
+}
+
+
+@media(768<=width<=991){
+.botonFuncion{
+        width: 20%;
+    }
+.entrada{
+        width: 70%;
+    }
+}
+@media (width >= 992px) {
+    .img-error404{
+      width: 40%;
+    }
+
+    .botonFuncion{
+        width: 20%;
+    }
+    
+    .entrada{
+        width: 70%;
+    }
+  }

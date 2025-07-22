@@ -55,8 +55,103 @@
             </div>
           </nav>
     </header>
-    <main class="pt-5 mt-5 container">
+    <main class="py-5 container d-flex flex-column">
+      <div class="mt-5">
+        <h1>Formulario</h1>
+        <p class="lead fw-semibold">Ingresá los datos correspondientes</p>
+        <form id="formPersona" class="w-75 formPersona">
+          <div class="mb-3 entrada">
+            <label for="nombre" class="form-label">Nombre *</label>
+            <input
+              type="text"
+              class="form-control"
+              id="nombre"
+              placeholder="Ej: juan"
+              minlength="4"
+              maxlength="20"
+              required
+            />
+          </div>
+          <div class="mb-3 entrada">
+            <label for="edad" class="form-label">Edad *</label>
+            <input
+              type="number"
+              class="form-control"
+              id="edad"
+              placeholder="Ej: 20"
+              minlength="1"
+              maxlength="120"
+              required
+            />
+          </div>
+          <div class="mb-3 entrada">
+            <label for="dni" class="form-label">Dni *</label>
+            <input
+              type="number"
+              class="form-control"
+              id="dni"
+              placeholder="Ej: 20222666"
+              minlength="7"
+              maxlength="8"
+              required
+            />
+          </div>
+          <div class="mb-3 entrada">
+            <label for="sexo" class="form-label">Sexo *</label>
+            <select name="sexo" id="sexo" class="form-select" required>
+              <option value="seleccionar">Seleccione su Sexo</option>
+              <option value="Femenino">F</option>
+              <option value="Masculino">M</option>
+            </select>
+          </div>
+          <div class="mb-3 entrada">
+            <label for="peso" class="form-label">Peso *</label>
+            <input
+              type="number"
+              class="form-control"
+              id="peso"
+              placeholder="Ej: 80"
+              minlength="1"
+              maxlength="200"
+              required
+            />
+          </div>
+          <div class="mb-3 entrada">
+            <label for="altura" class="form-label">Altura *</label>
+            <input
+              type="number"
+              class="form-control"
+              id="altura"
+              placeholder="Expresar altura en centimetros. Ej: 125"
+              minlength="100"
+              maxlength="300"
+              required
+            />
+          </div>
+          <div class="mb-3 entrada">
+            <label for="anioNac" class="form-label">Año de nacimiento *</label>
+            <input
+              type="number"
+              class="form-control"
+              id="anioNac"
+              placeholder="Ej: 1998"
+              minlength="1900"
+              maxlength="2025"
+              required
+            />
+          </div>
+          <div>
+            <p class="text-secondary">Los campos con (*) son obligatorios</p>
+          </div>
+          <button type ="submit" class="btn btn-primary">Enviar</button>
+        </form>
+      </div>
+      <div id="botonMetodos" class="align-content-center d-none">
+        <p id="datosPersona"></p>
+        <button id="btnMostrarGen" class="btn btn-success m-3 botonFuncion">Mostrar Generación</button>
+        <button id="btnMayorEdad" class="btn btn-primary m-3 botonFuncion">Mayor de edad</button>
         
+      </div>
     </main>
     <footer class="bg-primary-subtle text-center py-3">&copy Todos los derechos reservados</footer>
     <script src="../js/bootstrap.min.js"></script>
